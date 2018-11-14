@@ -65,6 +65,7 @@ impl error::Error for StatsdError {
 /// let client = Client::new("127.0.0.1:8125", "myapp");
 /// client.incr("some.metric.completed");
 /// ```
+#[derive(Debug)]
 pub struct Client {
     socket: UdpSocket,
     server_address: SocketAddr,
